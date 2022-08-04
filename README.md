@@ -28,7 +28,6 @@
     ├── basic_techniques.ipynb                     # Source files (alternatively `lib` or `app`)
     ├── bayesian_optimization.ipynb                    # Automated tests (alternatively `spec` or `tests`)
     ├── keras_tuner.ipynb                   # Tools and utilities
-    ├── Resources and references
     ├── LICENSE
     └── README.md
 
