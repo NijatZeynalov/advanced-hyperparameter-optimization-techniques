@@ -15,19 +15,20 @@
 ## 8. Resources and references
 
 
-Folder Structure Conventions
-============================
+## Project Structure
+
 
 > Folder structure options and naming conventions for software projects
 
 ### A typical top-level directory layout
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
+    ├── data                   # Compiled files (alternatively `dist`)
     ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                   # Tools and utilities
+    ├── basic_techniques.ipynb                     # Source files (alternatively `lib` or `app`)
+    ├── bayesian_optimization.ipynb                    # Automated tests (alternatively `spec` or `tests`)
+    ├── keras_tuner.ipynb                   # Tools and utilities
+    ├── Resources and references
     ├── LICENSE
     └── README.md
 
