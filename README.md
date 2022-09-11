@@ -36,7 +36,7 @@ used to search a parameter space using successive halving applied to the grid se
 In halving, a large number of hyperparameter combinations are evaluated in an initial round of tests but using a small amount of computational resources. 
 
 
-## 3. Bayesian optimization 
+## 2. Bayesian optimization 
 
 The key idea behind Bayesian optimization is that we optimize a proxy function (the surrogate function) instead than the true objective function (what actually grid search and random search both do). This holds if testing the true objective function is costly (if it is not, then we simply go for random search.
 
@@ -47,7 +47,7 @@ Bayesian Optimization uses an acquisition function to tell us how promising an o
 ![image](https://user-images.githubusercontent.com/31247506/189525643-7f90a697-1071-4ac4-930d-8a4a731a17a1.png)
 
 
-## 5. KerasTuner: hyperparameter tuning for Keras models (Bayesian and Hyperband optimization).
+## 3. KerasTuner: hyperparameter tuning for Keras models (Bayesian and Hyperband optimization).
 
 Keras Tuner is an easy-to-use, distributable hyperparameter optimization framework that solves the pain points of performing a hyperparameter search. Keras Tuner makes it easy to define a search space and leverage included algorithms to find the best hyperparameter values. Keras Tuner comes with Bayesian Optimization, Hyperband, and Random Search algorithms built-in, and is also designed to be easy for researchers to extend in order to experiment with new search algorithms.
 
