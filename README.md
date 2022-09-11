@@ -57,18 +57,6 @@ It randomly allocates resources like iterations, data samples, and features to d
 
 On the other hand, Bayesian optimization uses Bayes theorem to find the best hyperparameters settings as we mentioned earlier.
 
-> Folder structure options and naming conventions for software projects
+## Conclusion
 
-### A typical top-level directory layout
-
-    .
-    ├── data                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── basic_techniques.ipynb                     # Source files (alternatively `lib` or `app`)
-    ├── bayesian_optimization.ipynb                    # Automated tests (alternatively `spec` or `tests`)
-    ├── keras_tuner.ipynb                   # Tools and utilities
-    ├── LICENSE
-    └── README.md
-
-> Use short lowercase names at least for the top-level files and folders except
-> `LICENSE`, `README.md`
+The Hyperparameter Optimization for Machine Learning algorithm is an essential part of building ML models to enhance model performance. Tuning machine learning models manually can be a very time-consuming task. In this project, I have experimented optimization techniques both for classicial Machine Learning and Deep Learning models. 
