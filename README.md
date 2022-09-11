@@ -36,6 +36,22 @@ used to search a parameter space using successive halving applied to the grid se
 In halving, a large number of hyperparameter combinations are evaluated in an initial round of tests but using a small amount of computational resources. 
 
 
+In this notebook, I have written a class where we should input X, y, paramater space and metric score which hyperparamater optimization strategy should maximize. By using this class, we can compare all four basic methods on the provided dataset.
+
+Class has two methods:
+
+show_confusion_matrix() - run all strategies and evaluate models. Then show confusion matrix for each strategy.
+
+run_and_show_results() - runs all strageties and return dataframe that has following features: name, best_params, best_score, run_time
+
+We can change:
+
+estimator - select your favorite estimator for modeling. :)
+
+p_space - if you dont mind estimator, but want to change paramater space, just define a dictionary and write down your own space. ps: if you have changed estimator, dont forget to change p_space as well.
+
+metric - Not sure about accuracy? No problem. Evaluate your strategies with roc_auc, f1_score, and etc.
+
 ## 2. Bayesian optimization 
 
 The key idea behind Bayesian optimization is that we optimize a proxy function (the surrogate function) instead than the true objective function (what actually grid search and random search both do). This holds if testing the true objective function is costly (if it is not, then we simply go for random search.
