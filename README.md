@@ -26,29 +26,36 @@ Random search is a very useful option when you have several hyperparameters with
 
 ![alt text](https://www.yourdatateacher.com/wp-content/uploads/2021/03/image-7.png)
 
-## 2. Successive halving search.
+### 1.3 Successive halving search.
 
 Grid search and random search work in an uninformed way: if some tests find out that certain hyperparameters do not impact the result or that certain value intervals are ineffective, the information is not propagated to the following searches.
 
 Scikit-learn has recently introduced the HalvingGridSearchCV and HalvingRandomSearchCV estimators, which can be
 used to search a parameter space using successive halving applied to the grid search and random search tuning strategies.
 
-
-## 3. Bayesian optimization using scikit-optimize.
-
-## 4. Customizing Bayesian optimization.
-
-## 5. KerasTuner: hyperparameter tuning for Keras models (Bayesian optimization).
-
-## 6. KerasTuner: hyperparameter tuning for Keras models (hyperband optimization).
-
-## 7. Parameter cheetsheet for hyperparameter optimization
-
-## 8. Resources and references
+In halving, a large number of hyperparameter combinations are evaluated in an initial round of tests but using a small amount of computational resources. 
 
 
-## Project Structure
+## 3. Bayesian optimization 
 
+The key idea behind Bayesian optimization is that we optimize a proxy function (the surrogate function) instead than the true objective function (what actually grid search and random search both do). This holds if testing the true objective function is costly (if it is not, then we simply go for random search.
+
+Bayesian search balances exploration against exploitation. At start it randomly explores, doing so it builds up a surrogate function of the objective. Based on that surrogate function it exploits an initial approximate knowledge of how the predictor works in order to sample more useful examples and minimize the cost function at a global level, not a local one.
+
+Bayesian Optimization uses an acquisition function to tell us how promising an observation will be. In fact, to rule the tradeoff between exploration and exploitation, the algorithm defines an acquisition function that provides a single measure of how useful it would be to try any given point.
+
+![image](https://user-images.githubusercontent.com/31247506/189525643-7f90a697-1071-4ac4-930d-8a4a731a17a1.png)
+
+
+## 5. KerasTuner: hyperparameter tuning for Keras models (Bayesian and Hyperband optimization).
+
+Keras Tuner is an easy-to-use, distributable hyperparameter optimization framework that solves the pain points of performing a hyperparameter search. Keras Tuner makes it easy to define a search space and leverage included algorithms to find the best hyperparameter values. Keras Tuner comes with Bayesian Optimization, Hyperband, and Random Search algorithms built-in, and is also designed to be easy for researchers to extend in order to experiment with new search algorithms.
+
+Hyperband optimization is a variation of random search with explore-exploit theory to find good hyperparameters settings. It focuses on speeding up random search through adaptive resource allocation and early stopping.
+
+It randomly allocates resources like iterations, data samples, and features to different hyperparameters settings and tries to solve stochastic bandit problems where it keeps on eliminating underperforming settings.
+
+On the other hand, Bayesian optimization uses Bayes theorem to find the best hyperparameters settings as we mentioned earlier.
 
 > Folder structure options and naming conventions for software projects
 
